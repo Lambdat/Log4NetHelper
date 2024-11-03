@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 using System;
 using System.Text;
@@ -9,7 +9,8 @@ ILog log = LogHelper.Log4NetHelper.GetLogger();
 string me = "sono Antonio!"; 
 
 log.Info(String.Format("Ciao Mondo, {0}",me));
-
+log.Debug("Riga di debug");
+log.Warn("Riga di Avvertimento");
 try
 {
     int divisore = 0;
@@ -22,7 +23,10 @@ try
 
 }catch(DivideByZeroException ex)
 {
-    log.Error(new StringBuilder("Eccezione rilevata : ").Append(ex.Message).ToString());
+    log.Error($"Eccezione rilevata (divisione per 0) : {ex.Message.ToString()}");
 
 }
-
+catch(Exception ex)
+{
+    log.Error($"Eccezione rilevata : {ex.Message.ToString()}");
+}

@@ -5,8 +5,22 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <PackageId>Lambdat.Log4NetHelper</PackageId>
+    <Authors>Antonio Orefice</Authors>
+    <Company>Antonio Orefice</Company>
+    <Product>Log4NetHelper</Product>
+    <Description>An Apache Log4Net Helper</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Antonio Orefice</Copyright>
+    <PackageTags>log4net;helper;logger;log;text</PackageTags>
+    <PackageProjectUrl>https://github.com/Lambdat/Log4NetHelper</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+	
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.13" />
   </ItemGroup>
